@@ -1,1 +1,7 @@
-
+../Core/Src/dht11.c:4:9:DHT11_Read	5
+../Core/Src/dht11.c:23:9:DHT11_Start	4
+../Core/Src/dht11.c:45:6:DWT_Delay_Init	1
+../Core/Src/dht11.c:51:6:delay_us	2
+../Core/Src/dht11.c:59:6:Set_Pin_Input	1
+../Core/Src/dht11.c:67:6:Set_Pin_Output	1
+../Core/Src/dht11.c:75:6:Read_Temp_Hum	3
