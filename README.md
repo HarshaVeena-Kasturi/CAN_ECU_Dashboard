@@ -1,9 +1,12 @@
 # 🚗 CAN ECU Dashboard System
 
-## 🚗 CAN ECU Dashboard Architecture
+---
+
+
+##  CAN ECU Dashboard Architecture
 
 <p align="center">
-  <img src="./assets/can.png" alt="CAN ECU Dashboard System" width="100%">
+  <img src="./asserts/can.png" alt="CAN ECU Dashboard System" width="1000">
 </p>
 
 <p align="center">
@@ -88,8 +91,6 @@ CAN_ECU_Dashboard/
 ├── ecu.h # ECU interface
 └── README.md # Documentation
 
-
-
 ---
 
 ## ⚙️ Working Principle
@@ -102,10 +103,61 @@ CAN_ECU_Dashboard/
 6. Dashboard displays real-time information  
 
 ---
+## ⚙️ System Description
 
-## 🔄 Data Flow
+This system consists of **three Electronic Control Units (ECUs)** connected via **CAN Bus** to build a real-time car dashboard.
 
-ECU → CAN Frame → CAN Bus → Microcontroller → Decode → Display
+### 🔹 ECU 1 – Sensor Monitoring
+- Controls vehicle **indicators**
+- Measures **speed**
+- Monitors **temperature**
+
+### 🔹 ECU 2 – Performance Monitoring
+- Detects **gear position**
+- Measures **RPM (engine speed)**
+- Tracks **time**
+
+### 🔹 ECU 3 – Display Unit
+- Receives CAN data
+- Sends data via **UART**
+- Displays information on dashboard
+
+---
+
+# 🆔 CAN Message IDs
+
+Parameter&CAN ID
+
+Indicator-0x101
+
+Speed-0x201
+
+Temperature-0x301
+
+Gear-0x401
+
+RPM-0x501
+
+Time-0x601
+
+👉 IDs help the receiver understand what data is coming
+
+---
+
+# 🖥️ Sample Output (Tera Term)
+Time-12:45:33 
+
+Speed-45   
+
+RPM-67  
+
+Gear-G2  
+
+Temp-30
+
+Indicator-NoI
+
+👉 This is your digital dashboard output
 
 ---
 
